@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+
+
+/* >>>>> HEADER <<<<< */
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 25px;
+    }
+
+    .header a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .headerLogo{
+        font-size: 50px;
+        font-family: "Koulen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .headerNav{
+        font-size: 32px;
+        font-family: "Kosugi", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 900px) {
+        .headerLogo{
+            font-size: 24px;
+        }
+
+        .headerNav{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .headerLogo{
+            font-size: 20px;
+        }
+
+        .headerNav{
+            font-size: 18px;
+        }
+    }
+/*  */
