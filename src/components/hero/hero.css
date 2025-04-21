@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+
+/* >>>>> HERO SECTION CONTAINER <<<<< */
+    .hero{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 950px) {
+        .hero{
+            
+        }
+    }
+/*  */
+
+
+/* >>>>> INTRO TEXTS <<<<< */
+    .introText1{
+        padding-top: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .introText1, 
+    .introText2{
+        width: 100%;
+
+        font-size: 7rem;
+        font-family: "Kosugi Maru", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .introText2{
+        padding: 2px;
+        margin-top: 10px;
+        height: 100%;
+        width: 45%;
+        
+        background-color: black;
+        color: white;
+        
+        display: grid;
+        place-content: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1800px) {
+        .introText1{
+            padding-top: 1px;
+            /* padding: 30px; */
+        }
+        .introText1,
+        .introText2{
+            font-size: 5rem;
+        }
+
+        .introText2{
+            /* margin-top: 1px;
+            width: 42%; */
+        }
+    }
+
+    @media screen and (max-width: 1480px) {
+        .introText1{
+            padding-top: initial;
+        }
+        .introText1,
+        .introText2{
+            font-size: 4rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .introText1,
+        .introText2{
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .introText1{
+            padding-top: initial;
+            text-align: center;
+
+            width: 100%;
+
+            display: grid;
+            place-content: center;
+        }
+        .introText1,
+        .introText2{
+            font-size: 64px;
+        }
+
+        .introText2{
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .introText1,
+        .introText2{
+            font-size: 50px;
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+        .introText1,
+        .introText2{
+            font-size: 50px;
+        }
+
+        .introText2{
+            width: 85%;
+        }
+    }
+
+    @media screen and (max-width: 570px) {
+        .introText2{
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .introText1{
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        .introText1,
+        .introText2{
+            font-size: 40px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .introText1,
+        .introText2{
+            font-size: 30px;
+        }
+    }
+/*  */
+
+
+/* >>>>> HERO NAVIGATION SECTION <<<<< */
+    .heroNav{
+        padding-left: 60px;
+        padding-right: 60px;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* >>> HERO NAV <<< */
+    .heroNav nav{
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .heroNav a{
+        text-decoration: none;
+        color: black;
+
+        font-size: 34px;
+        font-family: "Kosugi", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1800px) {
+        .heroNav{
+            /* padding-left: 30px;
+            padding-right: 30px; */
+        }
+    }
+
+    @media screen and (max-width: 1480px) {
+        .heroNav{
+            /* padding-left: 30px;
+            padding-right: 30px; */
+        }
+
+        .heroNav a{
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .heroNav{
+            flex-direction: column;
+        }
+
+        .heroNav a{
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .heroNav{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .heroNav a{
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        .heroNav a{
+            font-size: 16px;
+        }
+    }
+/*  */
+
+
+/* >>>>> VIEW NAV RESULTS <<<<< */
+    .viewNav{
+        height: 40.7rem;
+        width: 100%;
+        background-color: violet;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1800px) {
+        .viewNav{
+            height: 33.9rem;
+        }
+    }
+    @media screen and (max-width: 1480px) {
+        .viewNav{
+            height: 36rem;
+        }
+    }
+    @media screen and (max-width: 1239px) {
+        .viewNav{
+            height: 32rem;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .viewNav{
+            height: 41.8rem;
+        }
+    }
+    @media screen and (max-width: 950px) {
+        .viewNav{
+            height: 34.5rem;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .viewNav{
+            height: 70dvh;
+        }
+    }
+/*  */
