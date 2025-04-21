@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+/* >>>>> WELCOME CONTAINER <<<<< */
+    .welcomeContainer{
+        width: 100%;
+        height: 100%;
+
+        background-color: aliceblue;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcomeMassage{
+        padding-left: 60px;
+        padding-right: 60px;
+
+        font-size: 3.5rem;
+        font-family: "Kosugi Maru", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1800px) {
+        .welcomeMassage{
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        .welcomeMassage{
+            font-size: 2.5rem;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .welcomeContainer{
+            text-align: center;
+        }
+        .welcomeMassage{
+            font-size: 2.5rem;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .welcomeContainer{
+            text-align: center;
+        }
+        .welcomeMassage{
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        .welcomeContainer{
+            text-align: center;
+        }
+        .welcomeMassage{
+            padding-left: 60px;
+            padding-right: 60px;
+
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 410px) {
+        .welcomeContainer{
+            text-align: center;
+        }
+        .welcomeMassage{
+            padding-left: 60px;
+            padding-right: 60px;
+
+            font-size: 1.3rem;
+        }
+    }
+/*  */
+
+
+/* >>>>> QUIZ NAVIGATOR BUTTON <<<<< */
+    .welcomeStart{
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .welcomeStart a{
+        margin-top: 60px;
+        width: 300px;
+        height: 90px;
+
+        background-color: black;
+        color: white;
+        text-decoration: none;
+
+        font-size: 48px;
+        font-family: "Kosugi Maru", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        display: grid;
+        place-content: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 950px) {
+        .welcomeStart{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        .welcomeStart{
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .welcomeStart a{
+            width: 250px;
+            height: 75px;
+
+            font-size: 30px;
+        }
+    }
+/*  */

@@ -1,5 +1,6 @@
 import React from 'react'
 import "./hero.css"
+import Welcome from '../welcome/Welcome'
 
 function Hero() {
   return (
@@ -21,7 +22,7 @@ function Hero() {
         </div>
 
         <div className="viewNav">
-
+            <Welcome />
         </div>
 
     </section>
