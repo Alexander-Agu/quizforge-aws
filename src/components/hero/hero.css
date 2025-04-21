@@ -172,7 +172,7 @@
         gap: 2rem;
     }
 
-    .heroNav a{
+    .navDisplay{
         text-decoration: none;
         color: black;
 
@@ -195,7 +195,7 @@
             padding-right: 30px; */
         }
 
-        .heroNav a{
+        .navDisplay{
             font-size: 25px;
         }
     }
@@ -205,7 +205,7 @@
             flex-direction: column;
         }
 
-        .heroNav a{
+        .navDisplay{
             font-size: 25px;
         }
     }
@@ -216,13 +216,13 @@
             padding-right: 30px;
         }
 
-        .heroNav a{
+        .navDisplay{
             font-size: 18px;
         }
     }
 
     @media screen and (max-width: 390px) {
-        .heroNav a{
+        .navDisplay{
             font-size: 16px;
         }
     }
@@ -233,7 +233,7 @@
     .viewNav{
         height: 40.7rem;
         width: 100%;
-        background-color: violet;
+        /* background-color: violet; */
     }
     /* >>> RESPONSIVE <<< */
     @media screen and (max-width: 1800px) {
