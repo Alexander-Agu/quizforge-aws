@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+
+
+/* >>>>> CARD CONTAINER <<<<< */
+    .card{
+        width: 380px;
+        height: 490px;
+        padding: 20px;
+
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .cardTopic{
+        width: 50%;
+        font-size: 40px;
+        font-family: "Kosugi Maru", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .cardContent{
+        font-size: 22px;
+        font-family: "Kosugi", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1250px) {
+        .card{
+            width: 300px;
+            height: 400px;
+        }
+    
+        .cardTopic{
+            font-size: 30px;
+        }
+        
+        .cardContent{
+            font-size: 17px;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .card{
+            width: 70%;
+            height: 400px;
+        }
+    
+        .cardTopic{
+            font-size: 34px;
+        }
+        
+        .cardContent{
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 810px) {
+        .cardTopic{
+            font-size: 32px;
+        }
+        
+        .cardContent{
+            font-size: 22px;
+        }
+    }
+
+    @media screen and (max-width: 620px) {
+        .cardTopic{
+            font-size: 30px;
+        }
+        
+        .cardContent{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .card{
+            width: 90%;
+        }
+    
+        .cardTopic{
+            font-size: 28px;
+        }
+        
+        .cardContent{
+            font-size: 18px;
+        }
+    }
+/*  */
