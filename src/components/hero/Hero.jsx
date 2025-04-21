@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./hero.css"
 import Welcome from '../welcome/Welcome'
+import Info from '../info/Info'
+import { about, levels } from './heroData'
 
 function Hero() {
+    const [nav, setNav] = useState(0);
+    // const [display, setDisplay] = useState(<Welcome />);
+    let display = <Welcome />
+
+    if (nav === 0){
+        display = <Welcome />;
+    } else if (nav === 1){
+        display = <Info cards={about} />;
+    } else if (nav === 2){
+        display = <Info cards={levels} />;
+    }
+
+
   return (
     <section className='hero'>
         <p className='introText1'>
@@ -15,14 +30,14 @@ function Hero() {
             </p>
 
             <nav>
-                <a href="#">Quiz</a>
-                <a href="#">About</a>
-                <a href="#">Levels</a>
+                <p className='navDisplay' onClick={() => setNav(0)}>Quiz</p>
+                <p className='navDisplay' onClick={() => setNav(1)}>About</p>
+                <p className='navDisplay' onClick={() => setNav(2)}>Levels</p>
             </nav>
         </div>
 
         <div className="viewNav">
-            <Welcome />
+            {display}
         </div>
 
     </section>
