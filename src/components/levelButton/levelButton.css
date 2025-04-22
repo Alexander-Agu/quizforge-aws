@@ -1,0 +1,60 @@
+    /* >>>>> LEVEL BUTTON CONTAINER <<<<< */
+        .menuNav {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menuNav button {
+            height: 80px;
+            width: 340px;
+
+            outline: none;
+
+            font-size: 3rem;
+            font-family: "Kosugi", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    /* >>> RESPONSIVE <<< */
+        @media screen and (max-width: 1250px) {
+            .menuNav button{
+                height: 65px;
+                width: 280px;
+
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .menuNav button{
+                height: 55px;
+                width: 200px;
+
+                border: 1px solid black;
+
+                font-size: 1.3rem;
+            }
+        }
+
+        @media screen and (max-width: 660px) {
+            .menuNav button{
+                height: 55px;
+                width: 150px;
+
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .menuNav button{
+                height: 50px;
+                width: 100px;
+
+                font-size: 0.7rem;
+            }
+        }
+    /*  */
