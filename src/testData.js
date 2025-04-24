@@ -1,0 +1,47 @@
+export const quizes = [
+  {
+    quiz: "What is cloud computing?",
+    a: "A way to predict weather patterns",
+    b: "Using someone else's computer resources over the internet",
+    c: "Creating clouds using technology",
+    d: "A type of software for designing clouds",
+    correct: "b",
+    why: "Cloud computing is the delivery of computing services like servers, storage, and databases over the internet.",
+  },
+  {
+    quiz: "Which of the following is a common cloud service model?",
+    a: "HTML as a Service",
+    b: "Software as a Service",
+    c: "Graphic Design as a Service",
+    d: "Browser as a Service",
+    correct: "b",
+    why: "Software as a Service (SaaS) is a common model where users access software applications over the internet.",
+  },
+  {
+    quiz: "Which company is a major provider of cloud services?",
+    a: "McDonald's",
+    b: "Spotify",
+    c: "Amazon Web Services",
+    d: "Tesla",
+    correct: "c",
+    why: "Amazon Web Services (AWS) is one of the leading providers of cloud computing services globally.",
+  },
+  {
+    quiz: "What does 'scalability' mean in cloud computing?",
+    a: "Making clouds bigger in the sky",
+    b: "Increasing the number of users manually",
+    c: "The ability to grow or shrink resources as needed",
+    d: "Buying more physical hardware",
+    correct: "c",
+    why: "Scalability refers to the ability of a system to handle increased load by adjusting resources accordingly.",
+  },
+  {
+    quiz: "What is the main benefit of using cloud storage?",
+    a: "It increases internet speed",
+    b: "You can physically touch the storage",
+    c: "It allows access to data from anywhere",
+    d: "It replaces your computer's RAM",
+    correct: "c",
+    why: "Cloud storage allows users to store and access data remotely via the internet, making it accessible from anywhere.",
+  }
+];
