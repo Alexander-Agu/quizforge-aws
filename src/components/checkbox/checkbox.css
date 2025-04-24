@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+
+/* >>>>> CHECKBOX FORM <<<<< */
+    .checkboxForm{
+        width: 100%;
+        padding: 60px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    
+    }
+
+    .checkboxForm label{
+        font-size: 3rem;
+        font-family: "Kosugi", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1100px) {
+        .checkboxForm label{
+            font-size: 2rem;
+        }
+    }
+    @media screen and (max-width: 660px) {
+        .checkboxForm{
+            padding: 20px;
+            gap: 4rem;
+        }
+
+        .checkboxForm label{
+            font-size: 1rem;
+        }
+    }
+/*  */
+
+
+/* >>>>> CHECKBOXES <<<<< */
+    input[type="checkbox"] {
+        appearance: none;
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: black;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1100px) {
+        input[type = "checkbox"]{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 660px) {
+        input[type = "checkbox"]{
+            width: 20px;
+            height: 20px;
+        }
+    }
+/*  */
