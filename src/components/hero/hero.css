@@ -153,6 +153,7 @@
 
 /* >>>>> HERO NAVIGATION SECTION <<<<< */
     .heroNav{
+        padding-top: 40px;
         padding-left: 60px;
         padding-right: 60px;
         width: 100%;
