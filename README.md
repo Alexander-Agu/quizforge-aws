@@ -1,12 +1,29 @@
-# React + Vite
+# ☁️ Cloud Quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cloud Quiz is a fun and interactive web-based quiz platform that tests your knowledge of cloud computing concepts and services. Designed for beginners and intermediate learners, this project aims to make studying cloud tech engaging and accessible.
 
-Currently, two official plugins are available:
+##
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Built With
 
-## Expanding the ESLint configuration
+- **React** – Frontend library
+- *(Future)* Integration-ready with cloud services (like AWS or Firebase)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Screenshots
+
+*Coming soon...*
+
+## 📂 Project Structure
+
+```bash
+cloud-quiz/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+└── package.json
+```
