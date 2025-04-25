@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+/* >>>>> GAMER OVER CONTAINER <<<<< */
+    .gameOver{
+        width: 100%;
+        padding: 60px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gameOverHeader{
+        width: 100%;
+        padding: 30px;
+
+        font-family: "Koulen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gameOverHeader h1{
+        font-size: 4rem;
+    }
+
+    .gameOverHeader h2{
+        font-size: 3rem;
+    }
+
+    .quizCards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+
+    .toMenu{
+        height: 70px;
+        width: 150px;
+        margin: 20px;
+
+        outline: none;
+        border: none;
+        background-color: black;
+        color: white;
+
+        font-size: 3rem;
+        font-family: "Koulen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        display: grid;
+        place-content: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1800px) {
+        .gameOver{
+            padding: 10px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .gameOver{
+            padding: 0px;
+        }
+
+        .gameOverHeader h1{
+            font-size: 3rem;
+        }
+
+        .gameOverHeader h2{
+            font-size: 2rem;
+        }
+    }
+/*  */
