@@ -13,7 +13,7 @@ function Game() {
   const totalQuestions = data.length;
   const [questionNumber, setQuestionNumber] = useState(1)
   const [show, setShow] = useState(0)
-  const [getAnswer, setGetAnswer] = useState();
+  const [getAnswer, setGetAnswer] = useState("");
   const [points, setPoints] = useState(0);
   const [answers, setAnswer] = useState([]);
   const [correctCollection, setCorrectCollection] = useState([]);
@@ -35,17 +35,21 @@ function Game() {
 
 
   const next = ()=>{
-    if (getAnswer === data[show].correct) {
-      setPoints(prev => prev + 1);
-    }
+    if (getAnswer === ""){
+      alert("PLEASE SELECT A BOX!")
+    } else{
+      if (getAnswer === data[show].correct) {
+        setPoints(prev => prev + 1);
+      }
 
-    setQuestionNumber(prev => prev + 1);
-    setShow(prev => prev + 1);
-    setAnswer(prev => [...prev, data[show][getAnswer]])
-    setCorrectCollection(prev => [...prev, data[show][data[show].correct]])
+      setQuestionNumber(prev => prev + 1);
+      setShow(prev => prev + 1);
+      setAnswer(prev => [...prev, data[show][getAnswer]])
+      setCorrectCollection(prev => [...prev, data[show][data[show].correct]])
+    }
   }
 
-  
+
   if (loading === true) return <h1>LOADING.....</h1>
 
   if (questionNumber > totalQuestions) {
