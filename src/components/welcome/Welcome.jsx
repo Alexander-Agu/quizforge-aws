@@ -13,7 +13,7 @@ function Welcome() {
         </p>
 
         <div className="welcomeStart">
-            <a href='#'>
+            <a href='/menu'>
                 Start Quiz
             </a>
         </div>

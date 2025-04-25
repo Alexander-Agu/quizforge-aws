@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./gameOver.css"
 import Header from '../../components/header/Header'
 import QuizCard from '../../components/quizCard/QuizCard'
+import { Link } from 'react-router-dom'
 
 function GameOver({data, answers, correctCollection, points, questions}) {
     let answerNum = -1
@@ -43,9 +44,9 @@ function GameOver({data, answers, correctCollection, points, questions}) {
             }
         </div>
 
-        <button className='toMenu'>
+        <Link to={"/menu"} className='toMenu'>
             Menu.
-        </button>
+        </Link >
     </main>
   </>
 }
