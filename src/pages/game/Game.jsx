@@ -3,6 +3,7 @@ import "./game.css"
 import Header from '../../components/header/Header'
 import Checkbox from '../../components/checkbox/Checkbox'
 import { quizes } from '../../testData'
+import GameOver from '../gameOver/GameOver'
 
 function Game() {
   let data = quizes;
@@ -11,6 +12,8 @@ function Game() {
   const [show, setShow] = useState(0)
   const [getAnswer, setGetAnswer] = useState();
   const [points, setPoints] = useState(0);
+  const [answers, setAnswer] = useState([]);
+  const [correctCollection, setCorrectCollection] = useState([]);
 
 
   const next = ()=>{
@@ -20,9 +23,19 @@ function Game() {
 
     setQuestionNumber(prev => prev + 1);
     setShow(prev => prev + 1);
+    setAnswer(prev => [...prev, data[show][getAnswer]])
+    setCorrectCollection(prev => [...prev, data[show][data[show].correct]])
   }
 
-  if (questionNumber > totalQuestions) {return <h1>Done with the questions</h1>}
+  if (questionNumber > totalQuestions) {
+    return <GameOver 
+      data={data}
+      answers={answers}
+      correctCollection={correctCollection}
+      points={points}
+      questions={totalQuestions}
+    />
+  }
   else{
     return (
       <>
