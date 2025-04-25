@@ -16,7 +16,7 @@ function App() {
       element: <Menu />
     },
     {
-      path: "/game",
+      path: "/game/:levelId",
       element: <Game />
     }
   ]);

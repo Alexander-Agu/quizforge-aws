@@ -4,6 +4,7 @@ import Header from '../../components/header/Header'
 import Checkbox from '../../components/checkbox/Checkbox'
 import { quizes } from '../../testData'
 import GameOver from '../gameOver/GameOver'
+import { useParams } from 'react-router-dom'
 
 function Game() {
   let data = quizes;
@@ -14,6 +15,10 @@ function Game() {
   const [points, setPoints] = useState(0);
   const [answers, setAnswer] = useState([]);
   const [correctCollection, setCorrectCollection] = useState([]);
+
+  let param = useParams();
+  let level = param.levelId;
+  console.log(level)
 
 
   const next = ()=>{
