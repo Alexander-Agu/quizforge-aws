@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+
+
+/* >>>>> QUIZ CARD CONTAINER <<<<< */
+    .quizCard{
+        background-color: transparent;
+        width: 90%;
+        height: 350px;
+
+        border: 2px solid black;
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 0px) {
+        
+    }
+/*  */
+
+
+/* >>>>> QUIZ CARD TOP <<<<< */
+    .QcardTop{
+        background-color: transparent;
+        width: 95%;
+        height: 50%;
+
+        border-bottom: 2px solid black;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .QcardQuestion{
+        font-size: 2rem;
+        font-family: "Koulen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .playerAnswer{
+        font-size: 1.5rem;
+        font-family: "Kosugi", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPOSIVE <<< */
+    @media screen and (max-width: 1000px) {
+        .QcardQuestion{
+            font-size: 1.8rem;
+        }
+
+        .playerAnswer{
+            font-size: 1.3rem;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .QcardQuestion{
+            font-size: 1.5rem;
+        }
+
+        .playerAnswer{
+            font-size: 1rem;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .QcardQuestion{
+            font-size: 1.3rem;
+        }
+
+        .playerAnswer{
+            font-size: 0.8rem;
+        }
+    }
+/*  */
+
+
+/* >>>>> QUIZ CARD BOTTOM <<<<< */
+    .QcardBottom{
+        background-color: transparent;
+        width: 95%;
+        height: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .correctAnswer,
+    .why{
+        background-color: transparent;
+        font-size: 1.5rem;
+        font-family: "Kosugi", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1000px) {
+        .correctAnswer,
+        .why{
+            font-size: 1.3rem;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        .correctAnswer,
+        .why{
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .correctAnswer,
+        .why{
+            font-size: 0.8rem;
+        }
+    }
+/*  */
