@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import "./game.css"
 import Header from '../../components/header/Header'
 import Checkbox from '../../components/checkbox/Checkbox'
-import { quizes } from '../../testData'
 import GameOver from '../gameOver/GameOver'
 import { useParams } from 'react-router-dom'
+import { generateQuizes } from '../../model/quizGenerator'
 
 function Game() {
-  let data = quizes;
-  const totalQuestions = quizes.length;
+  const { levelId } = useParams(); 
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const totalQuestions = data.length;
   const [questionNumber, setQuestionNumber] = useState(1)
   const [show, setShow] = useState(0)
   const [getAnswer, setGetAnswer] = useState();
@@ -16,9 +18,20 @@ function Game() {
   const [answers, setAnswer] = useState([]);
   const [correctCollection, setCorrectCollection] = useState([]);
 
-  let param = useParams();
-  let level = param.levelId;
-  console.log(level)
+  useEffect(() => {
+    const getQuizesData = async () => {
+      try {
+        const res = await generateQuizes(parseInt(levelId));
+        setData(res);
+      } catch (error) {
+        console.log('Error fetching quizzes:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    getQuizesData();
+  }, [levelId]); 
 
 
   const next = ()=>{
@@ -31,6 +44,9 @@ function Game() {
     setAnswer(prev => [...prev, data[show][getAnswer]])
     setCorrectCollection(prev => [...prev, data[show][data[show].correct]])
   }
+
+  
+  if (loading === true) return <h1>LOADING.....</h1>
 
   if (questionNumber > totalQuestions) {
     return <GameOver 
