@@ -1,6 +1,6 @@
-# ☁️ Cloud Quiz
+# ☁️ Quiz Forge AWS
 
-Cloud Quiz is a fun and interactive web-based quiz platform that tests your knowledge of cloud computing concepts and services. Designed for beginners and intermediate learners, this project aims to make studying cloud tech engaging and accessible.
+Quiz Forge AWS is a fun and interactive web-based quiz platform that tests your knowledge of cloud computing concepts and services. Designed for beginners and intermediate learners, this project aims to make studying cloud tech engaging and accessible.
 
 ##
 
@@ -16,7 +16,7 @@ Cloud Quiz is a fun and interactive web-based quiz platform that tests your know
 ## 📂 Project Structure
 
 ```bash
-cloud-quiz/
+quizforge-aws/
 ├── public/
 ├── src/
 │   ├── components/
