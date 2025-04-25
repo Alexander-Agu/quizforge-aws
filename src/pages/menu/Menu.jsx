@@ -4,9 +4,11 @@ import "./menu.css"
 import Header from "../../components/header/Header"
 import { menuLevels } from './levels'
 import LevelButton from '../../components/levelButton/LevelButton'
+import { Link } from 'react-router-dom'
 
 function Menu() {
     const [levelDisplay, setLevelDisplay] = useState(1);
+    const [chooseLevel, setChooseLevel] = useState(1);
     let displayLevel = "Start with the fundamentals of AWS."
 
     if (levelDisplay === 1) displayLevel = "Start with the fundamentals of AWS.";
@@ -29,7 +31,7 @@ function Menu() {
                     menuLevels.map(x => {
                         const {type, id} = x;
 
-                        return <LevelButton type={type} id={id} setLevelDisplay={setLevelDisplay} />
+                        return <LevelButton type={type} id={id} setLevelDisplay={setLevelDisplay} setChooseLevel={setChooseLevel} />
                     })
                 }
             </nav>
@@ -38,9 +40,9 @@ function Menu() {
                 {displayLevel}
             </p>
 
-            <a href="#" className='menuStartBTN'>
+            <Link to={`/game/${chooseLevel}`} href="" className='menuStartBTN'>
                 Start Game
-            </a>
+            </Link>
         </main>
     </>
   )
