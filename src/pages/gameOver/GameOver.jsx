@@ -21,7 +21,7 @@ function GameOver({data, answers, correctCollection, points, questions}) {
 
     
   return <>
-    <Header />
+    <Header links={"/menu"} name={"Menu"} />
     <main className='gameOver'>
         <div className="gameOverHeader">
             <h2>{points} / {questions}</h2>

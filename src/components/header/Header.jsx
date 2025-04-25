@@ -1,12 +1,13 @@
 import React from 'react'
 import "./header.css"
 
-function Header({links}) {
+function Header({links, name}) {
+  
   return (
     <header className='header'>
-        <a href="#" className='headerLogo'>QUIZ FORGE AWS</a>
+        <a href="/" className='headerLogo'>QUIZ FORGE AWS</a>
 
-        <a href="#" className='headerNav'>Start Quiz</a>
+        <a href={links} className='headerNav'>{name}</a>
     </header>
   )
 }

@@ -39,7 +39,7 @@ function Game() {
   else{
     return (
       <>
-      <Header />
+      <Header links={"/menu"} name={"Menu"} />
       <main className='gameApp'>
         <section className='gameHeader'>
             <p className='questionNumber'>

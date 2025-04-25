@@ -5,7 +5,7 @@ import Hero from '../../components/hero/Hero'
 function Home() {
   return (
     <>
-    <Header />
+    <Header links={"/menu"} name={"Start Quiz"} />
     <Hero />
     </>
   )

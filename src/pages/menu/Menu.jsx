@@ -14,7 +14,7 @@ function Menu() {
     if (levelDisplay === 3) displayLevel = "Take on advanced scenarios to prepare for the Solutions Architect – Associate certification.";
   return (
     <>
-        <Header />
+        <Header links={"/"} name={"Home"} />
         <main className='menu'>
             <h1 className='menuTitle'>
                 Welcome to the AWS Cloud Quiz Challenge!
