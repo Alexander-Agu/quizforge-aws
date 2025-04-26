@@ -29,3 +29,10 @@ export const levels = [
     }
 ];
 
+export const unSelectedTab = {
+    "color": "#716C6C"
+}
+
+export const selectedTab = {
+    "color": "black"
+}

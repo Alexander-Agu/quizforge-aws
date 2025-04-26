@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import "./hero.css"
 import Welcome from '../welcome/Welcome'
 import Info from '../info/Info'
-import { about, levels } from './heroData'
+import { about, levels, selectedTab, unSelectedTab } from './heroData'
 
 function Hero() {
     const [nav, setNav] = useState(0);
-    // const [display, setDisplay] = useState(<Welcome />);
     let display = <Welcome />
 
     if (nav === 0){
@@ -30,7 +29,7 @@ function Hero() {
             </p>
 
             <nav>
-                <p className='navDisplay' onClick={() => setNav(0)}>Quiz</p>
+                <p className='navDisplay' style={{}} onClick={() => setNav(0)}>Quiz</p>
                 <p className='navDisplay' onClick={() => setNav(1)}>About</p>
                 <p className='navDisplay' onClick={() => setNav(2)}>Levels</p>
             </nav>
