@@ -17,6 +17,7 @@ function Game() {
   const [points, setPoints] = useState(0);
   const [answers, setAnswer] = useState([]);
   const [correctCollection, setCorrectCollection] = useState([]);
+  const [reset, setReset] = useState();
 
   useEffect(() => {
     const getQuizesData = async () => {
@@ -46,6 +47,12 @@ function Game() {
       setShow(prev => prev + 1);
       setAnswer(prev => [...prev, data[show][getAnswer]])
       setCorrectCollection(prev => [...prev, data[show][data[show].correct]])
+
+      // Resets checkbox when the next question is asked
+      reset.forEach((item) => {
+        item.checked = false;
+      });
+      setGetAnswer("");
     }
   }
 
@@ -83,6 +90,7 @@ function Game() {
             d={data[show].d} 
             setAnswer={setGetAnswer}
             data={Object.keys(data[show])}
+            reset={setReset}
           />
 
         <div className="nextBTN">

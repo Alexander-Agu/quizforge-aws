@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./checkbox.css"
 
-function Checkbox({a, b, c, d, setAnswer, data}) {
+function Checkbox({a, b, c, d, setAnswer, data, reset}) {
 
     function selectOnlyThis(checkbox) {
         const checkboxes = document.getElementsByName('option');
@@ -10,6 +10,7 @@ function Checkbox({a, b, c, d, setAnswer, data}) {
         });
 
         setAnswer(checkbox.value)
+        reset(checkboxes)
     }
   return (
     <>
