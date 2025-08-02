@@ -1,5 +1,5 @@
 import React from 'react'
-import "./LevelButton.css"
+import "./levelButton.css"
 
 function LevelButton({type, id, setLevelDisplay, setChooseLevel}) {
   return (
