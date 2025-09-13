@@ -3,43 +3,61 @@ import "./hero.css"
 import Welcome from '../welcome/Welcome'
 import Info from '../info/Info'
 import { about, levels, selectedTab, unSelectedTab } from './heroData'
+import Card from '../card/Card'
+
 
 function Hero() {
-    const [nav, setNav] = useState(0);
-    let display = <Welcome />
+    const [level, setLevel] = useState(-1);
+    const [selectedLevel, setSelectedLevel] = useState(-1);
 
-    if (nav === 0){
-        display = <Welcome />;
-    } else if (nav === 1){
-        display = <Info cards={about} />;
-    } else if (nav === 2){
-        display = <Info cards={levels} />;
+    const startGame = ()=> {
+        if (selectedLevel < 0){
+            alert("Click on the difficulty level above then start your quiz")
+        }
+
+        else{
+            console.log("To game")
+            location.href = `/game/${selectedLevel + 1}`
+        }
     }
-
-
+    
   return (
-    <section className='hero'>
-        <p className='introText1'>
-            Amazon Web Services cloud computing
-        </p>
+    <article className='hero'>
+        <section className='intro'>
+            <h1>QUIZ FORGE AWS</h1>
 
-        <div className="heroNav">
-            <p className='introText2'>
-                quiz Challenge.
+            <h2>Welcome to the AWS quiz challenge!</h2>
+
+            <p>
+                Get ready to test and grow your knowlwdge of AWS Cloud Computing through interactive, AI powered quizzes. Whether you're just starting out or preparing for a certificate, there's a challenge waiting for you.
             </p>
+        </section>
 
-            <nav>
-                <p className='navDisplay' style={{}} onClick={() => setNav(0)}>Quiz</p>
-                <p className='navDisplay' onClick={() => setNav(1)}>About</p>
-                <p className='navDisplay' onClick={() => setNav(2)}>Levels</p>
-            </nav>
-        </div>
 
-        <div className="viewNav">
-            {display}
-        </div>
+        <section className='levels'>
+            <h2 className='level-intro'>Quiz Level Options:</h2>
 
-    </section>
+            <div className="options">
+
+                {
+                    about.map((x, index) => {
+                        return <Card
+                            setLevel={setSelectedLevel} 
+                            level={index} 
+                            selectedLevel={selectedLevel}
+                            data={x} 
+                        />
+                    })
+                }
+            </div>
+        </section>
+
+
+        <section className='to-game'>
+            <button onClick={()=> startGame()} className='start-btn'>Start Quiz!</button>
+            <p>Click on the difficulty level above then start your quiz</p>
+        </section>
+    </article>
   )
 }
 

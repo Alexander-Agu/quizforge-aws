@@ -1,17 +1,29 @@
+import { IoBookOutline } from "react-icons/io5";
+import { MdShowChart } from "react-icons/md";
+import { GiSportMedal } from "react-icons/gi";
+
+
 export const about = [
     {
-        title: "Purpose of the Platform",
-        content: "This platform is built to support learners in mastering AWS Cloud Computing through an engaging, quiz-based learning experience. Whether you're new to cloud technologies or preparing for AWS certification, the platform provides an effective way to reinforce your knowledge and track your progress."
+        icon: <IoBookOutline style={{"color": "#42b883", "fontWeight": "bolder"}} />,
+        title: "Beginner",
+        headerText: "Start with the fundamentals of AWS.",
+        content: "Covers: EC2, S3, IAM, pricing, shared responsibility model"
     },
     {
-        title: "How the Platform Works",
-        content: "At the core of the platform is an AI-powered quiz engine that dynamically generates AWS-related questions. Users can choose to take randomized quizzes or select questions based on predefined difficulty levels — Beginner, Intermediate, or Professional. This ensures a tailored learning experience for users at every stage of their cloud journey."
+        icon: <MdShowChart style={{"color": "orange", "fontWeight": "bolder"}} />,
+        title: "Intermediate",
+        headerText: "Tackle questions designed to help you pass the Cloud Practitioner exam.",
+        content: "Covers: architectural principles, billing, pricing, security, troubleshooting"
     },
     {
-        title: "Value and Impact",
-        content: "By combining artificial intelligence with structured learning paths, the platform offers a smarter approach to cloud education. Users not only test their knowledge but also receive instant feedback and insights, helping them identify gaps and grow more confidently toward their AWS goals."
-    }
+        icon: <GiSportMedal style={{"color": "red", "fontWeight": "bolder"}} />,
+        title: "Professional",
+        headerText: "Take on advanced scenarios to prepare for the Solutions Architect – Associate certification..",
+        content: "Covers: high availability, system design, performance optimization, fault tolerance"
+    },
 ];
+
 
 
 export const levels = [

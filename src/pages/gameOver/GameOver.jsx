@@ -3,49 +3,33 @@ import "./gameOver.css"
 import Header from '../../components/header/Header'
 import QuizCard from '../../components/quizCard/QuizCard'
 import { Link } from 'react-router-dom'
+import ResultCard from "../../components/ResultCard/ResultCard"
 
-function GameOver({data, answers, correctCollection, points, questions}) {
-    let answerNum = -1
-    let scoreMessage = ""
 
-    function calculatePercentage(points, total) {
-        if (total === 0) return 0;
-        return Math.round((points / total) * 100);
-    }
+function GameOver({data, points, totalQuestions}) {
+  const percentage = parseFloat(((points / totalQuestions) * 100).toFixed(2))
+  const resultColor = percentage < 50 ? "#e46161" : "#42b883"
 
-    const scorePercentage = calculatePercentage(points, questions);
 
-    if (scorePercentage == 100) scoreMessage = "You passed!";
-    else if(scorePercentage > 50) scoreMessage = "Barely passed!";
-    else if (scorePercentage >= 30 && scorePercentage <= 50) scoreMessage = "Failed but not bad!";
-    else scoreMessage = "SIESSSS!";
-
-    
   return <>
-    <Header links={"/menu"} name={"Menu"} />
     <main className='gameOver'>
-        <div className="gameOverHeader">
-            <h2>{points} / {questions}</h2>
-            <h1>{scoreMessage}</h1>
-        </div>
+        <section className="gameOverHeader">
+            <h1>Quiz Results</h1>
 
-        <div className="quizCards">
-            {
-                data.map(x => {
-                    const {quiz, why} = x;
-                    answerNum += 1;
-                    return <QuizCard key={quiz}
-                        question={quiz}
-                        answer={answers[answerNum]}
-                        correct={correctCollection[answerNum]}
-                        why={why}
-                    />
-                })
-            }
-        </div>
+            <h2 style={{color: resultColor}}>{points} / {totalQuestions}</h2>
+            <p>You scored <span style={{color: resultColor}}>{percentage}% </span></p>
+        </section>
 
-        <Link to={"/menu"} className='toMenu'>
-            Menu.
+        <section className="quizCards">
+          { 
+            data.map((x, index) => {
+              return <ResultCard key={index} quizNum={index + 1} data={x} />
+            })
+          }
+        </section>
+
+        <Link to={"/"} className='toMenu'>
+            Home.
         </Link >
     </main>
   </>

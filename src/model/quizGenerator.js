@@ -33,6 +33,7 @@ Each question must include:
 2. Four options labeled a, b, c, and d
 3. One correct answer marked with its corresponding letter (correct)
 4. A short explanation of the correct answer (why)
+5. An empty value by (result)
 
 Use this difficulty description to guide the tone and depth of the questions:
 
@@ -54,7 +55,8 @@ ${levels[level - 1]}
     "c": "A search engine",
     "d": "A type of operating system",
     "correct": "b",
-    "why": "AWS stands for Amazon Web Services and provides cloud computing solutions."
+    "why": "AWS stands for Amazon Web Services and provides cloud computing solutions.",
+    "result: ""
   },
   ...
 ]'
