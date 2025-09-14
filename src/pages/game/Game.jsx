@@ -14,6 +14,11 @@ function Game() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const totalQuestions = data.length;
+
+  let currLevel
+  if (levelId == 1) currLevel = "Beginner";
+  if (levelId == 2) currLevel = "Intermediate";
+  if (levelId == 3) currLevel = "Professional";
   
   const [show, setShow] = useState(0)
   const [getAnswer, setGetAnswer] = useState("");
@@ -96,7 +101,7 @@ function Game() {
         <main className='game-container'>
           <div className="game-wrapper">
             <section className='details'>
-              <h2>Beginner Level</h2>
+              <h2>{currLevel} Level</h2>
               <p>Question {questionNumber} of {totalQuestions}</p>
             </section>
 
