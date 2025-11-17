@@ -67,6 +67,8 @@ ${levels[level - 1]}
             model: 'gemini-2.0-flash-001',
             contents: prompt,
         });
+
+        console.log(response.text);
         return JSON.parse(response.text);
     }catch (error){
         console.error("Failed to generate quiz:", error);
